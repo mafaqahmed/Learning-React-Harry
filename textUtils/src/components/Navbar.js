@@ -1,10 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function Navbar({ title = "AfaqAhmed", mode, toggling }) {
+export default function Navbar({ title = "AfaqAhmed", mode, toggling, handleColor, color }) {
+
+  const flexStyle = {
+    display: "flex",
+    justifyContent:"center",
+    alignItems: "center"
+  }
   return (
     <div>
-      <nav className={`navbar navbar-expand-lg navbar-${mode} bg-${mode}`}>
+      <nav className={`navbar navbar-expand-lg navbar-${mode} bg-${color} text-${color}`}>
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
             {title}
@@ -44,7 +50,24 @@ export default function Navbar({ title = "AfaqAhmed", mode, toggling }) {
                 Search
               </button>
             </form> */}
-            <div className={`form-check form-switch text-${mode==="light"?"dark":"light"}`}>
+            <div style = {flexStyle}>
+              <input
+                type="color"
+                className="form-control form-control-color"
+                id="exampleColorInput"
+                value="white"
+                title="Choose your color"
+                onChange={handleColor}
+              />
+              <label htmlFor="exampleColorInput" className="form-label mx-2">
+                Color picker
+              </label>
+            </div>
+            <div
+              className={`form-check form-switch text-${
+                mode === "light" ? "dark" : "light"
+              }`}
+            >
               <input
                 className="form-check-input"
                 onClick={toggling}
