@@ -8,7 +8,7 @@ export default function Alert(props) {
   return (
     props.alert && (
       <div>
-        <div class="alert alert-light" role="alert">
+        <div className="alert alert-light bg-success text-light" role="alert">
           <strong>{capitalize(props.alert.type)}</strong> {props.alert.message}
         </div>
       </div>
