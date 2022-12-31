@@ -52,11 +52,11 @@ export default function Textblock(props) {
           style={{color: props.mode==='light'?"black":"white", backgroundColor: props.mode==='light'?"white":"#474646"}}
         ></textarea>
       </div>
-      <button className={`btn btn-primary mx-2`} onClick={upperCase}>Convert to Uppercase</button>
-      <button className={`btn btn-primary mx-2`} onClick={lowerCase}>Convert to Lowercase</button>
-      <button className={`btn btn-primary mx-2`} onClick={clearText}>Clear text</button>
-      <button className={`btn btn-primary mx-2`} onClick={copyText}>Copy text</button>
-      <button className={`btn btn-primary mx-2`} onClick={removeSpace}>Remove Extra Spaces</button>
+      <button className={`btn btn-primary mx-2 my-1`} onClick={upperCase}>Convert to Uppercase</button>
+      <button className={`btn btn-primary mx-2 my-1`} onClick={lowerCase}>Convert to Lowercase</button>
+      <button className={`btn btn-primary mx-2 my-1`} onClick={clearText}>Clear text</button>
+      <button className={`btn btn-primary mx-2 my-1`} onClick={copyText}>Copy text</button>
+      <button className={`btn btn-primary mx-2 my-1`} onClick={removeSpace}>Remove Extra Spaces</button>
     </div>
     <div className="my-3" style={{color: props.mode==='light'?"black":"white"}}>
     <h5>Text Summary</h5>
