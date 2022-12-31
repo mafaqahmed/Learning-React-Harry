@@ -40,8 +40,8 @@ export default function Textblock(props) {
 
   return (
     <>
-    <div>
-      <h1 style={{color: props.mode==='light'?"black":"white"}}>{props.heading}</h1>
+    <div className="container">
+      <h1 style={{color: props.mode==='light'?"black":"white", marginTop:'10px'}}>{props.heading}</h1>
       <div className="mb-3">
         <textarea
           className="form-control"

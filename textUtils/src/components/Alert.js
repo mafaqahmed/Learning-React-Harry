@@ -6,12 +6,14 @@ export default function Alert(props) {
         return (loWord.charAt(0).toUpperCase() + loWord.slice(1))
     }
   return (
-    props.alert && (
-      <div>
-        <div className="alert alert-light bg-success text-light" role="alert">
-          <strong>{capitalize(props.alert.type)}</strong> {props.alert.message}
+    <div style = {{height: '50px'}}>
+      {props.alert && (
+        <div>
+          <div className="alert alert-light bg-success text-light" role="alert">
+            <strong>{capitalize(props.alert.type)}</strong> {props.alert.message}
+          </div>
         </div>
-      </div>
-    )
+      )}
+    </div>
   );
 }
