@@ -49,7 +49,7 @@ export default function Textblock(props) {
           rows="8"
           value={text}
           onChange={handleOnChange}
-          style={{color: props.mode==='light'?"black":"white", backgroundColor: props.mode==='light'?"white":"grey"}}
+          style={{color: props.mode==='light'?"black":"white", backgroundColor: props.mode==='light'?"white":"#474646"}}
         ></textarea>
       </div>
       <button className={`btn btn-primary mx-2`} onClick={upperCase}>Convert to Uppercase</button>
