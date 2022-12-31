@@ -60,7 +60,7 @@ export default function Navbar({ title = "AfaqAhmed", mode, toggling, handleColo
                 title="Choose your color"
                 onChange={handleColor}
               />
-              <label htmlFor="exampleColorInput" className="form-label mx-2">
+              <label htmlFor="exampleColorInput" className="form-label mx-2" style={{color: mode==='dark'?'white':'black'}}>
                 Color picker
               </label>
             </div>
