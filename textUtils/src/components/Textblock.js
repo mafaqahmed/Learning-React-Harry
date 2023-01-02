@@ -52,11 +52,11 @@ export default function Textblock(props) {
           style={{color: props.mode==='light'?"black":"white", backgroundColor: props.mode==='light'?"white":"#474646"}}
         ></textarea>
       </div>
-      <button className={`btn btn-primary mx-2 my-1`} onClick={upperCase}>Convert to Uppercase</button>
-      <button className={`btn btn-primary mx-2 my-1`} onClick={lowerCase}>Convert to Lowercase</button>
-      <button className={`btn btn-primary mx-2 my-1`} onClick={clearText}>Clear text</button>
-      <button className={`btn btn-primary mx-2 my-1`} onClick={copyText}>Copy text</button>
-      <button className={`btn btn-primary mx-2 my-1`} onClick={removeSpace}>Remove Extra Spaces</button>
+      <button disabled = {text.length===0} className={`btn btn-primary mx-2 my-1`} onClick={upperCase}>Convert to Uppercase</button>
+      <button disabled = {text.length===0} className={`btn btn-primary mx-2 my-1`} onClick={lowerCase}>Convert to Lowercase</button>
+      <button disabled = {text.length===0} className={`btn btn-primary mx-2 my-1`} onClick={clearText}>Clear text</button>
+      <button disabled = {text.length===0} className={`btn btn-primary mx-2 my-1`} onClick={copyText}>Copy text</button>
+      <button disabled = {text.length===0} className={`btn btn-primary mx-2 my-1`} onClick={removeSpace}>Remove Extra Spaces</button>
     </div>
     <div className="my-3" style={{color: props.mode==='light'?"black":"white"}}>
     <h5>Text Summary</h5>
