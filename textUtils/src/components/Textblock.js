@@ -37,7 +37,7 @@ export default function Textblock(props) {
   };
 
   let i=0;
-  text.split(" ").forEach((entry) => entry !==""?++i:i);
+  text.split(/\s+/).forEach((entry) => entry !==""?++i:i);
 
   return (
     <>

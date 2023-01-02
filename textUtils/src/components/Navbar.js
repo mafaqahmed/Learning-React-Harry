@@ -2,16 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-export default function Navbar({ title = "AfaqAhmed", mode, toggling, handleColor, color }) {
-
-  const flexStyle = {
-    display: "flex",
-    justifyContent:"center",
-    alignItems: "center"
-  }
+export default function Navbar({
+  title = "AfaqAhmed",
+  mode,
+  toggling,
+  handleColor,
+  color,
+}) {
   return (
     <div>
-      <nav className={`navbar navbar-expand-lg navbar-${mode} bg-${color} text-${color}`}>
+      <nav
+        className={`navbar navbar-expand-lg navbar-${mode} bg-${color} text-${color}`}
+      >
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             {title}
@@ -40,18 +42,8 @@ export default function Navbar({ title = "AfaqAhmed", mode, toggling, handleColo
                 </Link>
               </li>
             </ul>
-            {/* <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form> */}
-            <div style = {flexStyle}>
+
+            <div className="d-flex">
               <input
                 type="color"
                 className="form-control form-control-color"
@@ -60,8 +52,12 @@ export default function Navbar({ title = "AfaqAhmed", mode, toggling, handleColo
                 title="Choose your color"
                 onChange={handleColor}
               />
-              <label htmlFor="exampleColorInput" className="form-label mx-2" style={{color: mode==='dark'?'white':'black'}}>
-                Color picker
+              <label
+                htmlFor="exampleColorInput"
+                className="form-check-label mx-2"
+                style={{ color: mode === "dark" ? "white" : "black" }}
+              >
+                Color Picker
               </label>
             </div>
             <div
