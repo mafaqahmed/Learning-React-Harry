@@ -4,6 +4,7 @@ import Spinner from "./Spinner";
 import PropTypes from "prop-types";
 
 export class News extends Component {
+
   static defaultProps = {
     category: "general",
   };
@@ -12,13 +13,18 @@ export class News extends Component {
     category: PropTypes.string,
   };
 
-  constructor() {
-    super();
+  capitalizeString = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  constructor(props) {
+    super(props);
     this.state = {
       articles: [],
       loading: true,
       page: 1,
     };
+    document.title = `JungleNews - ${this.capitalizeString(this.props.category)}`;
   }
 
   handleUpdate = async () => {
@@ -51,7 +57,7 @@ export class News extends Component {
     return (
       <div>
         <div className="container my-3">
-          <h1>Daily Headlines</h1>
+          <h1 className="text-center ,y-10" style={{margin: "15px 0"}}>JungleNews - Top {this.capitalizeString(this.props.category)} Headlines</h1>
           {this.state.loading && <Spinner />}
           <div className="row justify-content-md-center">
             {!this.state.loading &&
