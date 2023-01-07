@@ -15,9 +15,9 @@ export class Newsitems extends Component {
             <p className="card-text">
               {description
                 ? description.slice(0, 80)
-                : "No description avaiable"}...
+                : "No description available"}...
             </p>
-            <p className="card-text"><small className="text-muted">By {author} on {new Date(date).toUTCString()}</small></p>
+            <p className="card-text"><small className="text-danger">By {author} on {new Date(date).toUTCString()}</small></p>
             <a
               href={newsUrl}
               target="_blank "
