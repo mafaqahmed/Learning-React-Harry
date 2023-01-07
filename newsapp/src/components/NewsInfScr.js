@@ -38,7 +38,7 @@ export class NewsInfScr extends Component {
     let parsedData = await data.json();
     this.props.progress(70);
     this.setState({
-      articles: parsedData.articles,
+      articles:     parsedData.articles,
       totalResults: parsedData.totalResults,
       loading: false,
     });
@@ -58,7 +58,7 @@ export class NewsInfScr extends Component {
   render() {
     return (
       <div>
-        <h1 className="text-center ,y-10" style={{ margin: "12px 0" }}>
+        <h1 className="text-center my-10 mx-1" style={{ margin: "12px 0" }}>
           JungleNews - Top {this.capitalizeString(this.props.category)}{" "}
           Headlines
         </h1>
