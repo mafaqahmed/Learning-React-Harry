@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <Navbar/>
-      <News/>
+      <News category='sports'/>
     </div>
   );
 }
