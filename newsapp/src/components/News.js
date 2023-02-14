@@ -57,7 +57,7 @@ export class News extends Component {
     return (
       <div>
         <div className="container my-3">
-          <h1 className="text-center ,y-10" style={{margin: "15px 0"}}>JungleNews - Top {this.capitalizeString(this.props.category)} Headlines</h1>
+          <h1 className="text-center my-10" style={{margin: "15px 0"}}>JungleNews - Top {this.capitalizeString(this.props.category)} Headlines</h1>
           {this.state.loading && <Spinner />}
           <div className="row justify-content-md-center">
             {!this.state.loading &&

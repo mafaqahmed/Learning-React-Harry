@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import NewsInfScr from "./components/NewsInfScr";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
+import About from "./components/About";
 
 export default class App extends Component {
   state = {
@@ -25,6 +26,11 @@ export default class App extends Component {
               exact
               path="/"
               element={<NewsInfScr progress={this.setProgress} key="general" category="general" />}
+            />
+            <Route
+              exact
+              path="/about"
+              element={<About />}
             />
             <Route
               exact
